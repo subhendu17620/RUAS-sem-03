@@ -75,13 +75,10 @@ void printArray(int array[], int size)
   }
   printf("\n");
 }
-
-int main()
-{
-
-  int data[max];
+int data[max],l[max],k[max];
+void createdata(){
   // we are getting time for worst-case
-  // for (size_t i = max; i < -1; i--)
+  // for(size_t i = max; i < -1; i--)
   // {
   //   data[i] = i;
   // }
@@ -89,11 +86,17 @@ int main()
   for (size_t i = 0; i < max; i++)
   {
     scanf("%d",&data[i]);
+    l[i]=data[i];
+    k[i]=data[i];
   }
-  
+}
+
+int main()
+{
   int size = sizeof(data) / sizeof(data[0]);
   clock_t start_t, end_t;
-  
+
+  createdata();   
   start_t = clock();
   bubbleSort(data, max);
   end_t = clock();
@@ -101,17 +104,19 @@ int main()
   printArray(data, max);
   printf("\nExecution time for Bubble-sort : %f seconds", (double)(end_t - start_t) / CLOCKS_PER_SEC);
 
+  // createdata();
   start_t = clock();
-  selectionSort(data, max);
+  selectionSort(l, max);
   end_t = clock();
   printf("\nSelection Sort: ");
-  printArray(data, max);
+  printArray(l, max);
   printf("\nExecution time for Selection-sort : %f seconds", (double)(end_t - start_t) / CLOCKS_PER_SEC);
   
+  // createdata();
   start_t = clock();
-  quickSort(data, 0, max - 1);
+  quickSort(k, 0, max - 1);
   end_t = clock();
   printf("\nQuick Sort: ");
-  printArray(data, max);
+  printArray(k, max);
   printf("\nExecution time for Quick-sort : %f seconds", (double)(end_t - start_t) / CLOCKS_PER_SEC);
 }

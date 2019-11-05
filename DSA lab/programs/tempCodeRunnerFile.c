@@ -1,2 +1,2 @@
 
-  printArray(data, size);
+  printArray(data, max);
