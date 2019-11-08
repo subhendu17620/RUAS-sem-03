@@ -69,7 +69,7 @@ void main()
         push(op2 / op1);
         break;
       case '%':
-        push(op1 % op2);
+        push(op2 % op1);
         break;
       case '+':
         push(op1 + op2);
