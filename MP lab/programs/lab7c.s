@@ -4,7 +4,7 @@ str1:
     .ascii "subhendu"
 
 str2:
-    .ascii "subhendu"
+    .ascii "subhendumaji"
 
 equal:
     .ascii "equal"
@@ -35,12 +35,12 @@ _start:
     movl $8, %ecx   # set the length of the string
     movl $str1, %esi
     movl $str2, %edi
-    repe cmpsb
+    rep cmpsb
 
     cmp $0, %ecx
     je _equal
 _notequal:
-    movl $5, %ecx
+    movl $8, %ecx
     movl $notequal, %esi
     movl $output, %edi
     rep movsb
