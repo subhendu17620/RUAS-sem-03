@@ -25,6 +25,7 @@ struct node *insert(struct node *root, int key){
   }
   return root;
 }
+ 
 
 void inorder(struct node *root){
   if (root->left != NULL) {

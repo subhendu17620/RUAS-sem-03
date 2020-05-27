@@ -1,4 +1,4 @@
-// stack operations
+*// stack operations
 #include <stdio.h>
 #include <stdlib.h>
 

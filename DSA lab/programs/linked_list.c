@@ -14,6 +14,7 @@ void push(int x)
     newnode = (struct node *)malloc(sizeof(struct node));
     newnode->info = x;
     newnode->next = NULL;
+    
     if (top == NULL)
     {
         top = newnode;
